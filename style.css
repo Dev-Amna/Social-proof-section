@@ -1,0 +1,190 @@
+   :root {
+        --very-dark-magenta: hsl(300, 43%, 22%);
+        --soft-pink: hsl(333, 80%, 67%);
+        --dark-grayish-magenta: hsl(303, 10%, 53%);
+        --light-grayish-magenta: hsl(300, 24%, 96%);
+        --white: hsl(0, 0%, 100%);
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 15px;
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+        padding: 80px 24px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .container {
+        max-width: 1110px;
+        margin: 0 auto;
+      }
+      
+      .intro {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      
+      h1 {
+        color: var(--very-dark-magenta);
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 0.8;
+        margin-bottom: 25px;
+      }
+      
+      .intro p {
+        color: var(--dark-grayish-magenta);
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      
+      .ratings {
+        margin-bottom: 50px;
+      }
+      
+      .rating {
+        background-color: var(--light-grayish-magenta);
+        color: var(--very-dark-magenta);
+        font-weight: 700;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+      
+      .stars {
+        margin-bottom: 8px;
+      }
+      
+      .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      
+      .review {
+        background-color: var(--very-dark-magenta);
+        color: var(--white);
+        padding: 40px 30px;
+        border-radius: 8px;
+      }
+      
+      .reviewer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+      
+      .reviewer img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      
+      .reviewer-name {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      
+      .verified {
+        color: var(--soft-pink);
+      }
+      
+      .review-text {
+        line-height: 1.5;
+      }
+      
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .attribution a {
+        font-weight: bold;
+        background:linear-gradient(to left ,black,hsl(228, 77%, 53%),hsl(228, 100%, 50%)) ,black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      @media (min-width: 1024px) {
+        body {
+          background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+          padding: 0;
+        }
+        
+        .container {
+          padding: 120px 0;
+        }
+        
+        .top-section {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 70px;
+        }
+        
+        .intro {
+          text-align: left;
+          flex-basis: 40%;
+          margin-bottom: 0;
+        }
+        
+        h1 {
+          font-size: 3.5rem;
+          line-height: 0.9;
+          margin-bottom: 20px;
+        }
+        
+        .ratings {
+          flex-basis: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        
+        .rating {
+          display: flex;
+          align-items: center;
+          padding: 20px 30px;
+          width: 85%;
+        }
+        
+        .rating:nth-child(2) {
+          align-self: center;
+        }
+        
+        .rating:nth-child(3) {
+          align-self: flex-end;
+        }
+        
+        .stars {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+        
+        .reviews {
+          flex-direction: row;
+          gap: 30px;
+          height: 270px;
+        }
+        
+        .review:nth-child(2) {
+          align-self: center;
+        }
+        
+        .review:nth-child(3) {
+          align-self: flex-end;
+        }
+      }
